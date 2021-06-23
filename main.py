@@ -41,7 +41,7 @@ st.markdown("""
     The stars in the A and C systems orbit each other roughly every day and a half, and the two binaries orbit each other 
     about every four years. The B binary’s members circle each other about every eight days, but the pair is much farther away, 
     orbiting around the inner systems roughly every 2,000 years. 
-    The orbial periods of the three three eclipsing binaries are shown in the following photo (from NASA's Goddard Space Flight Center):
+    The orbial periods of the three eclipsing binaries are shown in the following photo (from NASA's Goddard Space Flight Center):
     """)
 
 image = Image.open('TYC_7037-89-1.jpg')
