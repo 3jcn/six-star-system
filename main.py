@@ -4,7 +4,6 @@ import numpy as np
 import lightkurve as lk
 from lightkurve import TessTargetPixelFile
 from PIL import Image
-plt.style.use('fivethirtyeight')
 
 # author: Thomas Nguyen; June 22, 2021
 
