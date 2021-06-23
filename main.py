@@ -108,6 +108,6 @@ st.markdown("""
     With several lines of python code & LightKurve library ran on a laptop, the periods of the three eclipsing binaries 
     in TIC 168789840 system were able to obtain. According to Powell at el., the primary stars in the binaries have masses 
     between 1.23 and 1.3 times that of the Sun and radii between 1.46 and 1.69 solar radii, 
-    and the secondary stars have masses and radii of 0.56-0.66 solar masses and 0.52-0.62 solar radii. This makes me wonder why
+    and the secondary stars have masses and radii of 0.56-0.66 solar masses and 0.52-0.62 solar radii. That information makes me wonder why
     binary B caused a bigger effect (55%) than binaries A and C on the overall brightness of the system?
     """)
