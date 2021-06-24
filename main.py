@@ -85,15 +85,15 @@ st.write("From the above graph, by using 'period_at_max_power' method, the best 
 periodogram.period_at_max_power
  
 st.write("Fold the lightcurve with this specific period, we can see the dip (35%) in the overall brightness of the system as follows:")
-lc.remove_nans().flatten(window_length=1001).fold(period=1.57).bin(binsize=15).plot(label='Binary A')
+lc.remove_nans().flatten(window_length=1001).fold(period=1.57).bin(time_bin_size=0.005).plot(label='Binary A')
 st.pyplot()
 
 st.write("Also from Plot 2, we can get the second best period is 8.215, fold the lightcurve with this period, we can see the dip (55%) as follows:")
-lc.remove_nans().flatten(window_length=401).fold(period=8.217).bin(binsize=15).plot(label='Binary B')
+lc.remove_nans().flatten(window_length=401).fold(period=8.217).bin(time_bin_size=0.005).plot(label='Binary B')
 st.pyplot()
 
 st.write("And this is lightcurve folded with period of 1.306 (15% dip):")
-lc.remove_nans().flatten(window_length=1001).fold(period=1.306).bin(binsize=15).plot(label='Binary C')
+lc.remove_nans().flatten(window_length=1001).fold(period=1.306).bin(time_bin_size=0.003).plot(label='Binary C')
 st.pyplot()
 
 st.write("Let's compare the above results with the results from ASAS-SN & WASP (Powell at el.)") 
