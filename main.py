@@ -104,7 +104,7 @@ st.image(image,use_column_width=True)
 
 st.subheader("Final Thoughts:")
 st.markdown("""
-    With several lines of python code & LightKurve library ran on a laptop, the periods of the three eclipsing binaries 
+    With several lines of python code & LightKurve library ran on an i3 laptop, the periods of the three eclipsing binaries 
     in TIC 168789840 system were able to obtain. According to Powell at el., the primary stars in the binaries have masses 
     between 1.23 and 1.3 times that of the Sun and radii between 1.46 and 1.69 solar radii, 
     and the secondary stars have masses and radii of 0.56-0.66 solar masses and 0.52-0.62 solar radii. That information makes me wonder why
