@@ -54,22 +54,20 @@ st.markdown("""
 
     """)
 
-from lightkurve import TessTargetPixelFile
-import lightkurve as lk
-from astropy.io import fits
-import pandas as pd
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 tpf = TessTargetPixelFile("tess2020294194027-s0031-0000000168789840-0198-s_tp.fits")
 tpf
+if st.button('Show TessTargetPixelFile Metadata'):
+    st.write(tpf.get_header(ext=0))
 
 aperture_mask = tpf.create_threshold_mask(threshold=10)
 lc = tpf.to_lightcurve(aperture_mask=aperture_mask)
 
-if st.button('Show TESS pixel data:'):
+if st.button('Show lightcurve file data:'):
     lc 
 
-st.write("First frame in the pixel file:")
+st.write("First frame in the pixel file (the first observation cadence in the Sector):")
 tpf.plot(aperture_mask=tpf.pipeline_mask)
 st.pyplot()
 
