@@ -64,7 +64,7 @@ if st.button('Show TessTargetPixelFile Metadata'):
 aperture_mask = tpf.create_threshold_mask(threshold=10)
 lc = tpf.to_lightcurve(aperture_mask=aperture_mask)
 
-if st.button('Show lightcurve object data:'):
+if st.button('Show TESSLightCurve object data:'):
     lc 
 
 st.write("First frame in the pixel file (the first observation cadence in the Sector):")
