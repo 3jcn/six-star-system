@@ -89,7 +89,7 @@ lc.remove_nans().flatten(window_length=1001).fold(period=1.57).bin(time_bin_size
 st.pyplot()
 
 st.write("Also from Plot 2, we can get the second best period is 8.215, fold the lightcurve with this period, we can see the dip (55%) as follows:")
-lc.remove_nans().flatten(window_length=401).fold(period=8.217).bin(time_bin_size=0.005).plot(label='Binary B')
+lc.remove_nans().flatten(window_length=401).fold(period=8.217).bin(time_bin_size=0.007).plot(label='Binary B')
 st.pyplot()
 
 st.write("And this is lightcurve folded with period of 1.306 (15% dip):")
@@ -100,7 +100,7 @@ st.write("Let's compare the above results with the results from ASAS-SN & WASP (
 image = Image.open('compare.png')
 st.image(image,use_column_width=True)
 
-st.subheader("Final Thoughts:")
+st.subheader("Conclusion:")
 st.markdown("""
     With several lines of python code & LightKurve library ran on an i3 laptop, the periods of the three eclipsing binaries 
     in TIC 168789840 system were able to obtain. According to Powell at el., the primary stars in the binaries have masses 
