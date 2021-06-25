@@ -77,23 +77,31 @@ lc.scatter()
 st.pyplot()
 
 st.write("Apply the 'Box Least Squares' (BLS) method for identifying transit signals (Plot 2):")
-import numpy as np
-periodogram = lc.remove_nans().flatten(window_length=401).to_periodogram(method="bls",period=np.arange(0.5,10,0.001))
+lc2 = lc.remove_nans().flatten(window_length=401)
+
+periodogram = lc2.to_periodogram(method="bls",period=np.arange(0.5,10,0.001))
 periodogram.plot()
 st.pyplot()
 st.write("From the above graph, by using 'period_at_max_power' method, the best period can be found:")
-periodogram.period_at_max_power
- 
+p1 = periodogram.period_at_max_power
+p1
 st.write("Fold the lightcurve with this specific period, we can see the dip (35%) in the overall brightness of the system as follows:")
-lc.remove_nans().flatten(window_length=1001).fold(period=1.57).bin(time_bin_size=0.005).plot(label='Binary A')
+lc2.fold(period=p1).bin(time_bin_size=0.005).plot(label='Binary A')
 st.pyplot()
 
-st.write("Also from Plot 2, we can get the second best period is 8.215, fold the lightcurve with this period, we can see the dip (55%) as follows:")
-lc.remove_nans().flatten(window_length=401).fold(period=8.217).bin(time_bin_size=0.007).plot(label='Binary B')
+st.write("Also from Plot 2, the second best period is:")
+periodogram2 = lc2.to_periodogram(method="bls",period=np.arange(8.2,8.27,0.001))
+p2 = periodogram2.period_at_max_power
+p2
+st.write("Fold the lightcurve with this period, we can see the dip (55%) as follows:")
+lc2.fold(period=p2).bin(time_bin_size=0.007).plot(label='Binary B')
 st.pyplot()
 
-st.write("And this is lightcurve folded with period of 1.306 (15% dip):")
-lc.remove_nans().flatten(window_length=1001).fold(period=1.306).bin(time_bin_size=0.003).plot(label='Binary C')
+st.write("And this is lightcurve phase-folded (15% dip) with period of:")
+periodogram3 = lc2.to_periodogram(method="bls",period=np.arange(1.29,1.32,0.001))
+p3 = periodogram3.period_at_max_power
+p3
+lc2.fold(period=p3).bin(time_bin_size=0.003).plot(label='Binary C')
 st.pyplot()
 
 st.write("Let's compare the above results with the results from ASAS-SN & WASP (Powell at el.)") 
