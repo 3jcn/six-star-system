@@ -82,7 +82,7 @@ lc2 = lc.remove_nans().flatten(window_length=401)
 periodogram = lc2.to_periodogram(method="bls",period=np.arange(0.5,10,0.001))
 periodogram.plot()
 st.pyplot()
-st.write("From the above graph, by using 'period_at_max_power' method, the best period can be found:")
+st.write("From the above graph, the best period can be found at:")
 p1 = periodogram.period_at_max_power
 p1
 st.write("Fold the lightcurve with this specific period, we can see the dip (35%) in the overall brightness of the system as follows:")
