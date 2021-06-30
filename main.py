@@ -85,7 +85,7 @@ st.pyplot()
 st.write("From the above graph, the best period can be found at:")
 p1 = periodogram.period_at_max_power
 p1
-st.write("Fold the lightcurve with this specific period, we can see the dip (35%) in the overall brightness of the system as follows:")
+st.write("Fold the lightcurve with this specific period, we can see the dip (3.5%) in the overall brightness of the system as follows:")
 lc2.fold(period=p1).bin(time_bin_size=0.005).plot(label='Binary A')
 st.pyplot()
 
@@ -93,11 +93,11 @@ st.write("Also from Plot 2, the second best period is:")
 periodogram2 = lc2.to_periodogram(method="bls",period=np.arange(8.2,8.27,0.001))
 p2 = periodogram2.period_at_max_power
 p2
-st.write("Fold the lightcurve with this period, we can see the dip (55%) as follows:")
+st.write("Fold the lightcurve with this period, we can see the dip (5.5%) as follows:")
 lc2.fold(period=p2).bin(time_bin_size=0.007).plot(label='Binary B')
 st.pyplot()
 
-st.write("And this is lightcurve phase-folded (15% dip) with period of:")
+st.write("And this is lightcurve phase-folded (1.5% dip) with period of:")
 periodogram3 = lc2.to_periodogram(method="bls",period=np.arange(1.29,1.32,0.001))
 p3 = periodogram3.period_at_max_power
 p3
