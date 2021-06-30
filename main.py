@@ -114,6 +114,6 @@ st.markdown("""
     in TIC 168789840 system were able to obtain.  \nAccording to Powell at el., the primary stars in the binaries have masses 
     between 1.23 and 1.3 times that of the Sun and radii between 1.46 and 1.69 solar radii, 
     and the secondary stars have masses and radii of 0.56-0.66 solar masses and 0.52-0.62 solar radii.  \nBecause binary B caused 
-    more dip (55%) than binaries A and C on the overall brightness of the system, I can conclude that the primary star in binary B
+    more dip than binaries A and C on the overall brightness of the system, I can conclude that the primary star in binary B
     has the biggest size in the system.
     """)
