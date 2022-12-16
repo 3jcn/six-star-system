@@ -57,7 +57,6 @@ st.markdown("""
     """)
 
 from lightkurve import TessTargetPixelFile
-import lightkurve as lk
 from astropy.io import fits
 import pandas as pd
 st.set_option('deprecation.showPyplotGlobalUse', False)
