@@ -5,4 +5,4 @@ pandas==1.4.2
 matplotlib==3.5.1
 streamlit==1.16.0
 Pillow==9.0.1
-lightkurve==2.0.10
+lightkurve==2.3.0
