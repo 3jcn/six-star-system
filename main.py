@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import lightkurve as lk
 from lightkurve import TessTargetPixelFile
+from astropy.io import fits
 from PIL import Image
 plt.style.use('fivethirtyeight')
 
@@ -56,9 +57,7 @@ st.markdown("""
 
     """)
 
-from lightkurve import TessTargetPixelFile
-from astropy.io import fits
-import pandas as pd
+
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 tpf = TessTargetPixelFile("tess2020294194027-s0031-0000000168789840-0198-s_tp.fits")
