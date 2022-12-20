@@ -79,7 +79,7 @@ lc.scatter()
 st.pyplot()
 
 st.write("Apply the 'Box Least Squares' (BLS) method for identifying transit signals (Plot 2):")
-import numpy as np
+
 periodogram = lc.remove_nans().flatten(window_length=401).to_periodogram(method="bls",period=np.arange(0.5,10,0.001))
 periodogram.plot()
 st.pyplot()
