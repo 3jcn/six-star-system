@@ -1,8 +1,8 @@
 pandas_datareader==0.9.0
-numpy==1.19.2
+numpy==1.21.5
 #tensorflow==2.5.0
 pandas==1.4.2
-matplotlib==3.3.2
+matplotlib==3.5.1
 streamlit==0.77.0
-Pillow==8.1.2
+Pillow==9.0.1
 lightkurve==2.0.10
