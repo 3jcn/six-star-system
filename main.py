@@ -65,7 +65,7 @@ tpf
 
 #aperture_mask = tpf.create_threshold_mask(threshold=10)
 #lc = tpf.to_lightcurve(aperture_mask=aperture_mask)
-lc = tpf.to_lightcurve(aperture_mask="pipeline")
+lc = tpf.to_lightcurve(aperture_mask="all")
 
 
 if st.button('Show TESS pixel data:'):
