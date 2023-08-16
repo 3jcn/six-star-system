@@ -63,8 +63,10 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 tpf = TessTargetPixelFile("tess2020294194027-s0031-0000000168789840-0198-s_tp.fits")
 tpf
 
-aperture_mask = tpf.create_threshold_mask(threshold=1)
-lc = tpf.to_lightcurve(aperture_mask=aperture_mask)
+#aperture_mask = tpf.create_threshold_mask(threshold=10)
+#lc = tpf.to_lightcurve(aperture_mask=aperture_mask)
+lc = tpf.to_lightcurve(aperture_mask="pipeline")
+
 
 if st.button('Show TESS pixel data:'):
     lc 
