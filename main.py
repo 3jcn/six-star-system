@@ -66,7 +66,7 @@ try:
 except Exception as e:
     print("Error opening FITS file:", e)
 
-custom_aperture_mask = tpf.create_threshold_mask(threshold=10)
+custom_aperture_mask = tpf.create_threshold_mask(threshold=5)
 custom_aperture_mask
 lc = tpf.to_lightcurve(aperture_mask=custom_aperture_mask)
 
