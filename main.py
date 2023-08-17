@@ -65,7 +65,6 @@ try:
     tpf = TessTargetPixelFile("tess2019140104343-s0012-0000000136916387-0144-s_lc.fits")
 except Exception as e:
     print("Error opening FITS file:", e)
-tpf
 
 custom_aperture_mask = tpf.create_threshold_mask(threshold=10)
 custom_aperture_mask
