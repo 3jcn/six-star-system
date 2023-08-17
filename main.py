@@ -61,7 +61,10 @@ st.markdown("""
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 #tpf = TessTargetPixelFile("tess2020294194027-s0031-0000000168789840-0198-s_tp.fits")
-tpf = TessTargetPixelFile("tess2019140104343-s0012-0000000136916387-0144-s_lc.fits")
+try:
+    tpf = TessTargetPixelFile("tess2019140104343-s0012-0000000136916387-0144-s_lc.fits")
+except Exception as e:
+    print("Error opening FITS file:", e)
 tpf
 
 custom_aperture_mask = tpf.create_threshold_mask(threshold=10)
