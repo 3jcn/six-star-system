@@ -56,7 +56,7 @@ st.markdown("""
     **Data source from:** [MAST: Barbara A. Mikulski Archive for Space Telescopes](https://mast.stsci.edu/portal/Mashup/Clients/Mast/Portal.html)  
 
     """)
-st.title(":red[Big Brother messed up my data...My apps are not working properly.]")
+st.title(":red[Big Brother messed up my data...My apps are not working properly. :sunglasses:]")
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
